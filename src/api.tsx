@@ -1,5 +1,10 @@
-const getAllDogs = () => {
-  // fill out method
+import { Dog } from "./types";
+
+const baseURL = "http://localhost:3000";
+
+const getAllDogs = (): Promise<Dog[]> => {
+  //getAllDogs: (): Promise<Dog[]> => {
+  return fetch(baseURL + "/dogs").then((res) => res.json());
 };
 
 const postDog = () => {

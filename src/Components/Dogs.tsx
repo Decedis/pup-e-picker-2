@@ -4,8 +4,7 @@ export const Dogs = () =>
   // no props allowed
   {
     return (
-      //  the "<> </>"" are called react fragments, it's like adding all the html inside
-      // without adding an actual html element
+      //Use Dog Provider HERE
       <>{/* Make all the dog cards show up here */}</>
     );
   };
