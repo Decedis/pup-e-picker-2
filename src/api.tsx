@@ -4,7 +4,7 @@ const baseURL = "http://localhost:3000";
 
 const getAllDogs = (): Promise<Dog[]> => {
   //getAllDogs: (): Promise<Dog[]> => {
-  return fetch(baseURL + "/dogs").then((res) => res.json());
+  return fetch(baseURL + "/dogs").then((res) => res.json()) as Promise<Dog[]>;
 };
 
 const postDog = () => {
