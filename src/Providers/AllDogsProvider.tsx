@@ -5,7 +5,7 @@ type TAllDogs = {
   allDogs: Dog[];
   setAllDogs: (input: Dog[]) => void;
 };
-const AllDogsContext = createContext<TAllDogs>({
+export const AllDogsContext = createContext<TAllDogs>({
   allDogs: [],
   setAllDogs: (dogs: Dog[]): Dog[] => dogs,
 });

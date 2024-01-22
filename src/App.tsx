@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useContext } from "react";
 import { Section } from "./Components/Section";
-
 import { Requests } from "./api";
 import { Dogs } from "./Components/Dogs";
-import { AllDogsProvider } from "./Providers/AllDogsProvider";
-import { LoadingPovider } from "./Providers/LoadingProvider";
+import { AllDogsContext, AllDogsProvider } from "./Providers/AllDogsProvider";
+import { LoadingContext, LoadingPovider } from "./Providers/LoadingProvider";
 
 export function App() {
+  const { allDogs, setAllDogs } = useContext(AllDogsContext);
+  const { isLoading, setIsLoading } = useContext(LoadingContext);
+
   const refetch = () => {
     setIsLoading(true);
     Requests.getAllDogs()

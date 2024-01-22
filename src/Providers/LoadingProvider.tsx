@@ -4,7 +4,7 @@ type TLoadingContext = {
   isLoading: boolean;
   setIsLoading: (input: boolean) => void;
 };
-const LoadingContext = createContext<TLoadingContext>({
+export const LoadingContext = createContext<TLoadingContext>({
   isLoading: false,
   setIsLoading: (loadingState: boolean): boolean => loadingState,
 });
