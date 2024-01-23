@@ -1,142 +1,142 @@
 {
   "dogs": [
     {
-      "name": "Abdul",
-      "image": "/assets/chihuahua.avif",
-      "description": "programming withdrawal Buckinghamshire Northwest Folding",
+      "name": "Jeremie",
+      "image": "/assets/corgi.png",
+      "description": "Chicken Hampshire services Practical Electronic olive Incredible hard",
       "isFavorite": true,
       "id": 0
     },
     {
-      "name": "Audreanne",
-      "image": "/assets/cowardly.png",
-      "description": "katal azure Gasoline Industrial Jeep",
+      "name": "Garry",
+      "image": "/assets/dalmation.png",
+      "description": "Bicycle Soul Northwest silver transmit Division program orchid",
       "isFavorite": true,
       "id": 1
     },
     {
-      "name": "Selina",
-      "image": "/assets/dalmation.png",
-      "description": "Rubber Oganesson Sausages adapter system",
-      "isFavorite": true,
+      "name": "Helga",
+      "image": "/assets/corgi.png",
+      "description": "Nigeria East Micronesia Southeast tepid Cab Borders",
+      "isFavorite": false,
       "id": 2
     },
     {
-      "name": "Nels",
-      "image": "/assets/cowardly.png",
-      "description": "Hassium Sedan East kind gold weatherise Southwest Convertible",
-      "isFavorite": true,
+      "name": "Meda",
+      "image": "/assets/boxer.png",
+      "description": "Central Volkswagen Forges Islands Pizza Handmade District parse",
+      "isFavorite": false,
       "id": 3
     },
     {
-      "name": "Willa",
-      "image": "/assets/chihuahua.avif",
-      "description": "Connecticut Kwacha Toys Facilitator Sandwich haptic Bicycle Awesome",
-      "isFavorite": false,
+      "name": "Princess",
+      "image": "/assets/dalmation.png",
+      "description": "Wooden collaborative robust niches furiously",
+      "isFavorite": true,
       "id": 4
     },
     {
-      "name": "Urban",
-      "image": "/assets/chihuahua.avif",
-      "description": "Metal Minivan card concept Optimization application Avon Cambridgeshire",
-      "isFavorite": false,
+      "name": "Elena",
+      "image": "/assets/boxer.png",
+      "description": "ampere pixel orchestration lest Mississippi radian green",
+      "isFavorite": true,
       "id": 5
     },
     {
-      "name": "Addie",
-      "image": "/assets/boxer.png",
-      "description": "heartfelt Congo Strategist morph Steel",
+      "name": "Murl",
+      "image": "/assets/corgi.png",
+      "description": "focus ohm atque Direct Antigua Granite Rubber primary",
       "isFavorite": true,
       "id": 6
     },
     {
-      "name": "Myah",
+      "name": "Camilla",
       "image": "/assets/boxer.png",
-      "description": "systemic Accounts Jersey Health Dong",
-      "isFavorite": true,
+      "description": "Gasoline Investor Orchestrator translate Facilitator",
+      "isFavorite": false,
       "id": 7
     },
     {
-      "name": "Sasha",
-      "image": "/assets/cowardly.png",
-      "description": "yuck Forward Southeast North Table Personal joule",
+      "name": "Jordyn",
+      "image": "/assets/dalmation.png",
+      "description": "Buckinghamshire compressing Antillian Future Towels grounded Dysprosium Recycled",
       "isFavorite": true,
       "id": 8
     },
     {
-      "name": "Theodora",
+      "name": "Eva",
       "image": "/assets/chihuahua.avif",
-      "description": "what Neutrois collaboration Ergonomic Fish splinter Soft white",
+      "description": "Metal online firewall restring Rover",
       "isFavorite": true,
       "id": 9
     },
     {
-      "name": "Anne",
-      "image": "/assets/boxer.png",
-      "description": "Jaguar invoice deposit South boohoo Gasoline Borders Dollar",
+      "name": "Janelle",
+      "image": "/assets/dalmation.png",
+      "description": "parsing Views most responsive Hybrid redundant steradian",
       "isFavorite": false,
       "id": 10
     },
     {
-      "name": "Fanny",
-      "image": "/assets/chihuahua.avif",
-      "description": "Silicon Schimmel Indiana Automotive Corporate",
-      "isFavorite": true,
+      "name": "Earnest",
+      "image": "/assets/cowardly.png",
+      "description": "Indium Southeast Investor 24/365 International",
+      "isFavorite": false,
       "id": 11
     },
     {
-      "name": "Salvatore",
-      "image": "/assets/cowardly.png",
-      "description": "Rock Caesium Southwest systemic teal Suriname Dollar East",
+      "name": "Garnet",
+      "image": "/assets/dalmation.png",
+      "description": "Customizable Gasoline Northeast Granite parse",
       "isFavorite": true,
       "id": 12
     },
     {
-      "name": "Jedediah",
-      "image": "/assets/dalmation.png",
-      "description": "Rustic Facilitator Aland Jewelery Finland deposit inborn",
-      "isFavorite": true,
+      "name": "Quinn",
+      "image": "/assets/cowardly.png",
+      "description": "Lead Hatchback Maine Account Northwest Tesla perfectly Planner",
+      "isFavorite": false,
       "id": 13
     },
     {
-      "name": "Branson",
-      "image": "/assets/blue-heeler.png",
-      "description": "payment Toyota Classical initiatives Bedfordshire",
+      "name": "Demetrius",
+      "image": "/assets/chihuahua.avif",
+      "description": "connecting national applications Practical who",
       "isFavorite": true,
       "id": 14
     },
     {
-      "name": "Kailyn",
-      "image": "/assets/chihuahua.avif",
-      "description": "Avon Clothing silver Hat Comoro incidentally Lithuania metrics",
-      "isFavorite": false,
+      "name": "Conor",
+      "image": "/assets/dalmation.png",
+      "description": "connect Stage unlike relent Soft",
+      "isFavorite": true,
       "id": 15
     },
     {
-      "name": "Fredrick",
+      "name": "Marge",
       "image": "/assets/dalmation.png",
-      "description": "Customer Coordinator back Unbranded Manager",
-      "isFavorite": true,
+      "description": "Transexual after mindshare Automotive Account",
+      "isFavorite": false,
       "id": 16
     },
     {
-      "name": "Delbert",
-      "image": "/assets/chihuahua.avif",
-      "description": "interface Agent Tanzania Outdoors Customer foreground Protactinium Ritchie",
+      "name": "Hilma",
+      "image": "/assets/corgi.png",
+      "description": "Gardens Communications purple Hermiston Nihonium Home program South",
       "isFavorite": false,
       "id": 17
     },
     {
-      "name": "Alize",
-      "image": "/assets/blue-heeler.png",
-      "description": "Functionality sequi white Buckinghamshire Ergonomic compressing Kwacha quantifying",
-      "isFavorite": false,
+      "name": "Annabell",
+      "image": "/assets/corgi.png",
+      "description": "weber Southeast Interactions silver blue blue payment",
+      "isFavorite": true,
       "id": 18
     },
     {
-      "name": "Gust",
-      "image": "/assets/blue-heeler.png",
-      "description": "edible Maserati Personal secured Northeast Tools Donnelly",
+      "name": "Rogelio",
+      "image": "/assets/boxer.png",
+      "description": "Fresh matrices XSS Cadmium Organized Touring Jazz SUV",
       "isFavorite": true,
       "id": 19
     }
