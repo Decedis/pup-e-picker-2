@@ -31,7 +31,7 @@ const deleteDogRequest = (id: number) => {
 
 const patchFavoriteForDog = (id: number, newData: Partial<Dog>) => {
   // fill out method
-  return fetch(`${baseURL}"/dogs/"${id}`, {
+  return fetch(`${baseURL}/dogs/${id}`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ ...newData }),
