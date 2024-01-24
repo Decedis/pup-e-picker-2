@@ -5,7 +5,7 @@ export const CreateDogForm = () =>
   // no props allowed
   {
     const [selectedImage, setSelectedImage] = useState(dogPictures.BlueHeeler);
-
+    console.log("CreateDogForm");
     return (
       <form
         action=""

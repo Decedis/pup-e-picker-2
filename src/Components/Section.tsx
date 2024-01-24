@@ -13,7 +13,7 @@ export const Section = ({
 }) => {
   const { allDogs } = useContext(AllDogsContext);
   const { activeComponent, setActiveComponent } = useContext(
-    ActiveComponentContext
+    ActiveComponentContext,
   );
 
   const favoritedDogs = allDogs.filter((dog) => dog.isFavorite);
@@ -26,11 +26,11 @@ export const Section = ({
   };
   const activeButtonSwitcher = (
     thisButton: ActiveComponent,
-    activeButton: ActiveComponent
+    activeButton: ActiveComponent,
   ): string => {
     return thisButton === activeButton ? `selector active` : `selector`;
   };
-  console.log("ActiveComponent: ", activeComponent);
+
   return (
     <section id="main-section">
       <div className="container-header">
@@ -38,7 +38,6 @@ export const Section = ({
         <div className="selectors">
           {/* This should display the favorited count */}
           <div
-            //className={`selector ${"active"}`}
             className={activeButtonSwitcher("favorited", activeComponent)}
             onClick={() => {
               toggleActiveView("favorited");
@@ -49,7 +48,6 @@ export const Section = ({
 
           {/* This should display the unfavorited count */}
           <div
-            //className={`selector ${""}`}
             className={activeButtonSwitcher("unfavorited", activeComponent)}
             onClick={() => {
               toggleActiveView("unfavorited");
@@ -58,7 +56,6 @@ export const Section = ({
             unfavorited ( {notFavoritedDogs.length} )
           </div>
           <div
-            //            className={`selector ${""}`}
             className={activeButtonSwitcher("create", activeComponent)}
             onClick={() => {
               toggleActiveView("create");

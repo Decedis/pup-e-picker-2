@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import "./App.css";
-import "./index.css";
 import { Toaster } from "react-hot-toast";
 import { App } from "./App";
+import "./App.css";
+import { ActiveComponentProvider } from "./Providers/ActiveComponentProvider";
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Toaster />
-    <App />
-  </React.StrictMode>
+    <ActiveComponentProvider>
+      <App />
+    </ActiveComponentProvider>
+  </React.StrictMode>,
 );

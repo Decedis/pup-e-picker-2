@@ -33,6 +33,7 @@ export const Dogs = () =>
       refetch();
       console.log("Refetch called");
     }, []);
+
     return (
       //Use Dog Provider HERE
       <>
