@@ -1,5 +1,7 @@
 import { ReactNode, useContext } from "react";
 import { AllDogsContext } from "../Providers/AllDogsProvider";
+import { ActiveComponentContext } from "../Providers/ActiveComponentProvider.tsx";
+import { ActiveComponent } from "../types.ts";
 
 export const Section = ({
   label,
@@ -10,10 +12,25 @@ export const Section = ({
   children: ReactNode;
 }) => {
   const { allDogs } = useContext(AllDogsContext);
+  const { activeComponent, setActiveComponent } = useContext(
+    ActiveComponentContext
+  );
 
   const favoritedDogs = allDogs.filter((dog) => dog.isFavorite);
   const notFavoritedDogs = allDogs.filter((dog) => !dog.isFavorite);
 
+  const toggleActiveView = (targetView: ActiveComponent) => {
+    return targetView === activeComponent
+      ? setActiveComponent("all")
+      : setActiveComponent(targetView);
+  };
+  const activeButtonSwitcher = (
+    thisButton: ActiveComponent,
+    activeButton: ActiveComponent
+  ): string => {
+    return thisButton === activeButton ? `selector active` : `selector`;
+  };
+  console.log("ActiveComponent: ", activeComponent);
   return (
     <section id="main-section">
       <div className="container-header">
@@ -21,9 +38,10 @@ export const Section = ({
         <div className="selectors">
           {/* This should display the favorited count */}
           <div
-            className={`selector ${"active"}`}
+            //className={`selector ${"active"}`}
+            className={activeButtonSwitcher("favorited", activeComponent)}
             onClick={() => {
-              alert("click favorited");
+              toggleActiveView("favorited");
             }}
           >
             favorited ( {favoritedDogs.length} )
@@ -31,17 +49,19 @@ export const Section = ({
 
           {/* This should display the unfavorited count */}
           <div
-            className={`selector ${""}`}
+            //className={`selector ${""}`}
+            className={activeButtonSwitcher("unfavorited", activeComponent)}
             onClick={() => {
-              alert("click unfavorited");
+              toggleActiveView("unfavorited");
             }}
           >
             unfavorited ( {notFavoritedDogs.length} )
           </div>
           <div
-            className={`selector ${""}`}
+            //            className={`selector ${""}`}
+            className={activeButtonSwitcher("create", activeComponent)}
             onClick={() => {
-              alert("clicked create dog");
+              toggleActiveView("create");
             }}
           >
             create dog
