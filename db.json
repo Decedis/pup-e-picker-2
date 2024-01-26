@@ -146,13 +146,6 @@
       "image": "/assets/blue-heeler.png",
       "isFavorite": false,
       "id": 20
-    },
-    {
-      "name": "h",
-      "description": "h",
-      "image": "/assets/boxer.jpeg",
-      "isFavorite": false,
-      "id": 21
     }
   ]
 }

@@ -22,17 +22,16 @@ export const Dogs = () =>
       if (viewableDogs === "all") {
         return allDogs;
       } else if (viewableDogs === "favorited") {
-        const favoritedDogs = allDogs.filter((dog) => dog.isFavorite);
-        return favoritedDogs;
+        return allDogs.filter((dog) => dog.isFavorite);
+        // favoritedDogs;
       } else if (viewableDogs === "unfavorited") {
-        const unFavoritedDogs = allDogs.filter((dog) => !dog.isFavorite);
-        return unFavoritedDogs;
+        return allDogs.filter((dog) => !dog.isFavorite);
+        // unFavoritedDogs;
       }
     };
     useEffect(() => {
       refetch();
-      console.log("Refetch called");
-    }, []);
+    }, [refetch]);
 
     return (
       //Use Dog Provider HERE

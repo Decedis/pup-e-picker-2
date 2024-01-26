@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import {useCallback, useContext} from "react";
 import { LoadingContext } from "./Providers/LoadingProvider";
 import { AllDogsContext } from "./Providers/AllDogsProvider";
 import { Requests } from "./api";
@@ -10,14 +10,14 @@ export const useServerActions = () => {
 
   console.log("setIsLoading", setIsLoading);
 
-  const refetch = () => {
+  const refetch = useCallback(() => {
     setIsLoading(true);
     Requests.getAllDogs()
-      .then(setAllDogs)
-      .finally(() => {
-        setIsLoading(false);
-      });
-  };
+        .then(setAllDogs)
+        .finally(() => {
+          setIsLoading(false);
+        });
+  },[setIsLoading, setAllDogs]);
 
   const deleteDog = (id: number) => {
     setIsLoading(true);
