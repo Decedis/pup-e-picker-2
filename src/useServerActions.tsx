@@ -6,11 +6,10 @@ import { Dog } from "./types";
 
 export const useServerActions = () => {
   const { setIsLoading } = useContext(LoadingContext);
-  const { setAllDogs } = useContext(AllDogsContext);
+  const { allDogs, setAllDogs } = useContext(AllDogsContext);
 
-
-
-  const refetch = useCallback(() => { //TODO consider refactoring
+  const refetch = useCallback(() => {
+    //TODO consider refactoring
     setIsLoading(true);
     Requests.getAllDogs()
       .then(setAllDogs)
@@ -20,10 +19,18 @@ export const useServerActions = () => {
   }, [setIsLoading, setAllDogs]);
 
   const deleteDog = (id: number) => {
-    setIsLoading(true);
+    const updatedDogData = allDogs.filter((dog) => dog.id !== id);
+    setAllDogs(updatedDogData);
+
     Requests.deleteDogRequest(id)
-      .then(refetch)
-      .catch((err) => console.log(err))
+      //.then(refetch)
+      .then(() => {
+        console.log("Deleted successfully");
+      })
+      .catch((err) => {
+        console.log(err);
+        setAllDogs(allDogs);
+      })
       .finally(() => {
         setIsLoading(false);
       });
