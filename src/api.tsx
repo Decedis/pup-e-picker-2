@@ -3,12 +3,12 @@ import { Dog } from "./types";
 const baseURL = "http://localhost:3000";
 
 const getAllDogs = (): Promise<Dog[]> => {
-  //getAllDogs: (): Promise<Dog[]> => {
+  
   return fetch(baseURL + "/dogs").then((res) => res.json()) as Promise<Dog[]>;
 };
 
 const postDog = async (dog: Omit<Dog, "id" | "isFavorite">) => {
-  // fill out method
+  
   const res = await fetch(baseURL + "/dogs", {
     method: "POST",
     headers: {
@@ -30,7 +30,7 @@ const deleteDogRequest = (id: number) => {
 };
 
 const patchFavoriteForDog = (id: number, newData: Partial<Dog>) => {
-  // fill out method
+  
   return fetch(`${baseURL}/dogs/${id}`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },

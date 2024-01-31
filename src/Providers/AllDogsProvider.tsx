@@ -11,7 +11,7 @@ export const AllDogsContext = createContext<TAllDogs>({
 });
 
 export const AllDogsProvider = ({ children }: { children: ReactNode }) => {
-  const [allDogs, setAllDogs] = useState<Dog[]>([]);
+  const [allDogs, setAllDogs] = useState<Dog[]>([] as Dog[]);
 
   return (
     <AllDogsContext.Provider value={{ allDogs, setAllDogs }}>
