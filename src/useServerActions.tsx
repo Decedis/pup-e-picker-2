@@ -23,7 +23,6 @@ export const useServerActions = () => {
     setAllDogs(updatedDogData);
 
     Requests.deleteDogRequest(id)
-      //.then(refetch)
       .then(() => {
         console.log("Deleted successfully");
       })
@@ -36,28 +35,63 @@ export const useServerActions = () => {
       });
   };
   const postDog = (newDog: Omit<Dog, "id">) => {
-    setIsLoading(true);
+    const updatedLocalDogData = () => {
+      const newLocalDog = { ...newDog, id: allDogs.length };
+      return [...allDogs, newLocalDog];
+    };
+
+    setAllDogs(updatedLocalDogData());
+
     return Requests.postDog(newDog)
       .then(refetch)
-      .catch((err) => console.log(err))
+      .catch((err) => {
+        console.log(err);
+        setAllDogs(allDogs);
+      })
       .finally(() => {
         setIsLoading(false);
       });
   };
   const favoriteDog = (id: number) => {
-    setIsLoading(true);
+    const updatedLocalDogData = () => {
+      const newLocalDog = allDogs.filter((dog) => {
+        dog.id === id ? dog.isFavorite === true : null;
+      });
+      return [...allDogs, newLocalDog] as Dog[];
+    };
+
+    setAllDogs(updatedLocalDogData());
+
     Requests.patchFavoriteForDog(id, { isFavorite: true })
-      .then(refetch)
-      .catch((err) => console.log(err))
+      .then(() => {
+        console.log("Dog has been favorited");
+      })
+      .catch((err) => {
+        console.log(err);
+        refetch();
+      })
       .finally(() => {
         setIsLoading(false);
       });
   };
   const unFavoriteDog = (id: number) => {
-    setIsLoading(true);
+    const updatedLocalDogData = () => {
+      const newLocalDog = allDogs.filter((dog) => {
+        dog.id === id ? dog.isFavorite === false : null;
+      });
+      return [...allDogs, newLocalDog] as Dog[];
+    };
+
+    setAllDogs(updatedLocalDogData());
+
     Requests.patchFavoriteForDog(id, { isFavorite: false })
-      .then(refetch)
-      .catch((err) => console.log(err))
+      .then(() => {
+        console.log("Dog has been unfavorited");
+      })
+      .catch((err) => {
+        console.log(err);
+        refetch();
+      })
       .finally(() => {
         setIsLoading(false);
       });
