@@ -10,50 +10,42 @@ import { ActiveComponent } from "../types.ts";
 
 // Todo: Refactor to get rid of props (THERE SHOULD BE NO PROPS DRILLING ON THIS COMPONENT)
 export const Dogs = () =>
-// no props allowed
-{
-  const { allDogs } = useContext(AllDogsContext);
-  const { isLoading } = useContext(LoadingContext);
-  const { activeComponent } = useContext(ActiveComponentContext);
-  const { refetch, favoriteDog, unFavoriteDog, deleteDog } =
-    useServerActions();
+  // no props allowed
+  {
+    const { allDogs } = useContext(AllDogsContext);
+    const { isLoading } = useContext(LoadingContext);
+    const { activeComponent } = useContext(ActiveComponentContext);
+    const { refetch, favoriteDog, unFavoriteDog, deleteDog } =
+      useServerActions();
 
-  const dogsToDisplay = (viewableDogs: ActiveComponent) => {
-    if (viewableDogs === "all") {
-      return allDogs;
-    } else if (viewableDogs === "favorited") {
-      return allDogs.filter((dog) => dog.isFavorite);
-      // favoritedDogs;
-    } else if (viewableDogs === "unfavorited") {
-      return allDogs.filter((dog) => !dog.isFavorite);
-      // unFavoritedDogs;
-    }
+    const dogsToDisplay = (viewableDogs: ActiveComponent) => {
+      if (viewableDogs === "all") {
+        return allDogs;
+      } else if (viewableDogs === "favorited") {
+        return allDogs.filter((dog) => dog.isFavorite);
+        // favoritedDogs;
+      } else if (viewableDogs === "unfavorited") {
+        return allDogs.filter((dog) => !dog.isFavorite);
+        // unFavoritedDogs;
+      }
+    };
+    useEffect(() => {
+      refetch();
+    }, [refetch]);
+
+    return (
+      //Use Dog Provider HERE
+      <>
+        {dogsToDisplay(activeComponent)?.map((dog) => (
+          <DogCard
+            key={dog.id}
+            dog={dog}
+            onEmptyHeartClick={() => favoriteDog(dog.id)}
+            onHeartClick={() => unFavoriteDog(dog.id)}
+            onTrashIconClick={() => deleteDog(dog.id)}
+            isLoading={false}
+          />
+        ))}
+      </>
+    );
   };
-  useEffect(() => {
-    refetch();
-  }, [refetch]);
-
-  return (
-    //Use Dog Provider HERE
-    <>
-      {dogsToDisplay(activeComponent)?.map((dog) => (
-        <DogCard
-          key={dog.id}
-          dog={dog}
-          onEmptyHeartClick={() => {
-            dog.isFavorite = true;
-            favoriteDog(dog.id)
-          }
-          }
-          onHeartClick={() => {
-            dog.isFavorite = false;
-            unFavoriteDog(dog.id)
-          }
-          }
-          onTrashIconClick={() => deleteDog(dog.id)}
-          isLoading={false}
-        />
-      ))}
-    </>
-  );
-};
