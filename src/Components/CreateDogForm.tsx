@@ -1,10 +1,8 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { dogPictures } from "../dog-pictures";
 import { useServerActions } from "../useServerActions.tsx";
 import { Dog } from "../types.ts";
 import toast from "react-hot-toast";
-import { LoadingContext } from "../Providers/LoadingProvider.tsx";
-import { AllDogsContext } from "../Providers/AllDogsProvider.tsx";
 
 const defaultSelectedImage = dogPictures.BlueHeeler;
 const defaultDog = {
