@@ -8,7 +8,12 @@ import { LoadingPovider } from "./Providers/LoadingProvider";
 
 export function App() {
   const { activeComponent } = useContext(ActiveComponentContext);
-
+  //TODO
+  /*
+  - Correct rendering 
+  - Correct optimistic rendering, it looks like it's not actually optimistic, and only worked due to Dogs.tsx forcing a local change there
+  - Update the server actions to be optimistic, and correct the duplication error taking place. 
+  */
   return (
     <LoadingPovider>
       <AllDogsProvider>

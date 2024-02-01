@@ -43,7 +43,7 @@ export const Dogs = () =>
             onEmptyHeartClick={() => favoriteDog(dog.id)}
             onHeartClick={() => unFavoriteDog(dog.id)}
             onTrashIconClick={() => deleteDog(dog.id)}
-            isLoading={false}
+            isLoading={isLoading}
           />
         ))}
       </>

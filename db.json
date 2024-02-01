@@ -11,22 +11,8 @@
       "name": "Winona",
       "image": "/assets/corgi.png",
       "description": "conventional array North Synergized ugh",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 1
-    },
-    {
-      "name": "Ed",
-      "image": "/assets/blue-heeler.png",
-      "description": "Northeast Southeast Kenyan orange times Group Algerian South",
-      "isFavorite": true,
-      "id": 2
-    },
-    {
-      "name": "Ilene",
-      "image": "/assets/corgi.png",
-      "description": "Electric Metal continually Turkish major",
-      "isFavorite": true,
-      "id": 3
     },
     {
       "name": "Mozelle",
@@ -39,7 +25,7 @@
       "name": "Kathryne",
       "image": "/assets/boxer.png",
       "description": "Texas eum Convertible Fantastic Officer Smart Southwest Practical",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 5
     },
     {
@@ -53,92 +39,57 @@
       "name": "Shania",
       "image": "/assets/cowardly.png",
       "description": "Bohrium Cliff schemas Rhode ASCII",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 7
     },
     {
       "name": "Waino",
       "image": "/assets/corgi.png",
       "description": "Granite Funk South Account Bugatti Tricycle Northeast",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 8
     },
     {
       "name": "Jeff",
       "image": "/assets/chihuahua.avif",
       "description": "Krone East pascal paradigms online Coupe frozen",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 9
     },
     {
       "name": "Uriel",
       "image": "/assets/dalmation.png",
       "description": "incidentally Directives couple systems yippee drat totam",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 10
     },
     {
       "name": "Lorenz",
       "image": "/assets/cowardly.png",
       "description": "Mississippi unimpressively Savings Hybrid Auto Product Manager Games",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 12
     },
     {
       "name": "Jaquan",
       "image": "/assets/boxer.png",
       "description": "male above enable Cambridgeshire Ford Rap libero with",
-      "isFavorite": true,
+      "isFavorite": false,
       "id": 13
     },
     {
-      "name": "Vance",
-      "image": "/assets/chihuahua.avif",
-      "description": "Buckinghamshire Burundi Kozey ew considering gah before",
-      "isFavorite": true,
-      "id": 14
-    },
-    {
-      "name": "Alysson",
-      "image": "/assets/blue-heeler.png",
-      "description": "Internal mostly alliance Card optimal viral Views Wagon",
-      "isFavorite": true,
-      "id": 15
-    },
-    {
-      "name": "Jarvis",
-      "image": "/assets/cowardly.png",
-      "description": "Republic West win bandwidth steradian non Saudi",
-      "isFavorite": true,
-      "id": 16
-    },
-    {
-      "name": "Libbie",
-      "image": "/assets/boxer.png",
-      "description": "Operative Latin formal Dollar robust",
-      "isFavorite": true,
-      "id": 17
-    },
-    {
-      "name": "Lauryn",
-      "image": "/assets/blue-heeler.png",
-      "description": "Sausages now neutral 24 transmogrify red Somalia",
-      "isFavorite": true,
-      "id": 18
-    },
-    {
-      "name": "Eileen",
-      "image": "/assets/dalmation.png",
-      "description": "Architect Pizza female Ridges Folk Generic hack aboard",
-      "isFavorite": true,
-      "id": 19
-    },
-    {
-      "name": "PostDog",
-      "description": "Living in a post dog world. ",
-      "image": "/assets/cowardly.png",
-      "isFavorite": true,
+      "name": "Florentine",
+      "description": "A dog of the doggest dog kind",
+      "image": "/assets/boxer.jpeg",
+      "isFavorite": false,
       "id": 20
+    },
+    {
+      "name": "Albernathy",
+      "description": "Why the fuck did you name the dog Albernathy?",
+      "image": "/assets/corgi.png",
+      "isFavorite": false,
+      "id": 21
     }
   ]
 }

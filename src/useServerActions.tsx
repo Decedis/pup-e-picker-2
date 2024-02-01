@@ -53,14 +53,14 @@ export const useServerActions = () => {
       });
   };
   const favoriteDog = (id: number) => {
-    const updatedLocalDogData = () => {
-      const newLocalDog = allDogs.filter((dog) => {
-        dog.id === id ? dog.isFavorite === true : null;
-      });
-      return [...allDogs, newLocalDog] as Dog[];
+    const updatedLocalDogData = (idInput: number) => {
+      const updatedDogs = allDogs.map((dog) =>
+        dog.id === idInput ? { ...dog, isFavorite: true } : dog
+      );
+      return updatedDogs;
     };
 
-    setAllDogs(updatedLocalDogData());
+    setAllDogs(updatedLocalDogData(id));
 
     Requests.patchFavoriteForDog(id, { isFavorite: true })
       .then(() => {
@@ -74,15 +74,16 @@ export const useServerActions = () => {
         setIsLoading(false);
       });
   };
+
   const unFavoriteDog = (id: number) => {
-    const updatedLocalDogData = () => {
-      const newLocalDog = allDogs.filter((dog) => {
-        dog.id === id ? dog.isFavorite === false : null;
-      });
-      return [...allDogs, newLocalDog] as Dog[];
+    const updatedLocalDogData = (idInput: number) => {
+      const updatedDogs = allDogs.map((dog) =>
+        dog.id === idInput ? { ...dog, isFavorite: false } : dog
+      );
+      return updatedDogs;
     };
 
-    setAllDogs(updatedLocalDogData());
+    setAllDogs(updatedLocalDogData(id));
 
     Requests.patchFavoriteForDog(id, { isFavorite: false })
       .then(() => {
