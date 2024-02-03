@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { dogPictures } from "../dog-pictures";
 import { useServerActions } from "../useServerActions.tsx";
 import { Dog } from "../types.ts";
 import toast from "react-hot-toast";
+import { LoadingContext } from "../Providers/LoadingProvider.tsx";
 
 const defaultSelectedImage = dogPictures.BlueHeeler;
 const defaultDog = {
@@ -17,8 +18,10 @@ export const CreateDogForm = () =>
   {
     const [newDog, setNewDog] = useState<Omit<Dog, "id">>(defaultDog);
     const { postDog } = useServerActions();
+    const { isLoading } = useContext(LoadingContext);
 
-    const shouldDisable = newDog.description === "" || newDog.name === "";
+    const shouldDisable =
+      isLoading || newDog.description === "" || newDog.name === "";
 
     return (
       <form

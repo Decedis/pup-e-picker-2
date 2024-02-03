@@ -49,7 +49,7 @@ export const useServerActions = () => {
         setAllDogs(allDogs);
       })
       .finally(() => {
-        setIsLoading(false);
+        setIsLoading(false); //TODO Remove all loading calls from all other functions
       });
   };
   const favoriteDog = (id: number) => {
