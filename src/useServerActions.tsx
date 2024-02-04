@@ -28,7 +28,8 @@ export const useServerActions = () => {
       })
       .catch((err) => {
         console.log(err);
-        setAllDogs(allDogs);
+        //setAllDogs(allDogs);
+        refetch();
       })
       .finally(() => {
         setIsLoading(false);
@@ -43,10 +44,11 @@ export const useServerActions = () => {
     setAllDogs(updatedLocalDogData());
 
     return Requests.postDog(newDog)
-      .then(refetch)
+      .then(() => console.log("Server dogs updated successfully"))
       .catch((err) => {
         console.log(err);
-        setAllDogs(allDogs);
+        //setAllDogs(allDogs);
+        refetch();
       })
       .finally(() => {
         setIsLoading(false); //TODO Remove all loading calls from all other functions
